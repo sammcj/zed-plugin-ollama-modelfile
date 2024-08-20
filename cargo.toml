@@ -7,7 +7,12 @@ license = "MIT"
 edition = "2021"
 
 build = "bindings/rust/build.rs"
-include = ["bindings/rust/*", "grammar.js", "queries/*", "src/*"]
+include = [
+    "bindings/rust/*",
+    "grammar.js",
+    "src/*",
+    "languages/ollama-modelfile/queries/*",
+]
 
 [lib]
 path = "bindings/rust/lib.rs"
