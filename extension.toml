@@ -1,7 +1,10 @@
 id = "sammcj.ollama-modelfile"
 name = "Ollama Modelfile"
 version = "0.1.0"
+schema_version = 1
+authors = ["Sam McLeod <sam.mcleod@zed.dev>"]
 description = "Ollama Modelfile support for Zed"
+repository = "https://github.com/sammcj/zed-plugin-ollama-modelfile"
 
 [grammars.ollama-modelfile]
 repository = "https://github.com/sammcj/zed-plugin-ollama-modelfile"
