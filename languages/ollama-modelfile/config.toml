@@ -1,4 +1,4 @@
 name = "Ollama Modelfile"
-grammar = "ollama-modelfile"
+grammar = "ollama_modelfile"
 path_suffixes = ["Modelfile"]
 line_comments = ["# "]
