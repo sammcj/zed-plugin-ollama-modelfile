@@ -8,4 +8,4 @@ repository = "https://github.com/sammcj/zed-plugin-ollama-modelfile"
 
 [grammars.ollama-modelfile]
 repository = "https://github.com/sammcj/zed-plugin-ollama-modelfile"
-commit = "4a1bb26c3f5fb5b46d8881cb6901d49a9e23cc07"
+commit = "cc3f8cf3fe65238f5c641c3ba59c6ce1cf9a8f27"
