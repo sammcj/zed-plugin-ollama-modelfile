@@ -4,9 +4,9 @@ version = "0.1.0"
 schema_version = 1
 authors = ["Sam McLeod"]
 description = "Ollama Modelfile support for Zed"
-commit = "ded09721c8eccde1b1ac04e3673fd042f891dc3f"
+commit = "9d0fa1057a01e07c455423c0cbba1913d0def2ac"
 
 [grammars.ollama_modelfile]
 repository = "https://github.com/sammcj/zed-plugin-ollama-modelfile"
-commit = "ded09721c8eccde1b1ac04e3673fd042f891dc3f"
+commit = "9d0fa1057a01e07c455423c0cbba1913d0def2ac"
 path = "."
