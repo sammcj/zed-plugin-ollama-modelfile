@@ -1,23 +1,22 @@
-use std::path::PathBuf;
-
 fn main() {
-    let src_dir = PathBuf::from("src");
-
-    println!("cargo:rerun-if-changed=src/parser.c");
-    println!("cargo:rerun-if-changed=src/scanner.c");
-    println!("cargo:rerun-if-changed=src/tree_sitter/parser.h");
+    let src_dir = std::path::Path::new("src");
 
     let mut c_config = cc::Build::new();
-    c_config.include(&src_dir);
-    c_config
-        .flag_if_supported("-Wno-unused-parameter")
-        .flag_if_supported("-Wno-unused-but-set-variable")
-        .flag_if_supported("-Wno-trigraphs");
-    c_config.file(&src_dir.join("parser.c"));
+    c_config.std("c11").include(src_dir);
 
-    if src_dir.join("scanner.c").exists() {
-        c_config.file(&src_dir.join("scanner.c"));
-    }
+    #[cfg(target_env = "msvc")]
+    c_config.flag("-utf-8");
 
-    c_config.compile("parser");
+    let parser_path = src_dir.join("parser.c");
+    c_config.file(&parser_path);
+    println!("cargo:rerun-if-changed={}", parser_path.to_str().unwrap());
+
+    // NOTE: if your language uses an external scanner, uncomment this block:
+    /*
+    let scanner_path = src_dir.join("scanner.c");
+    c_config.file(&scanner_path);
+    println!("cargo:rerun-if-changed={}", scanner_path.to_str().unwrap());
+    */
+
+    c_config.compile("tree-sitter-ollama_modelfile");
 }
