@@ -1,3 +1,8 @@
+id = "sammcj.ollama-modelfile"
+name = "Ollama Modelfile"
+version = "0.1.0"
+description = "Ollama Modelfile support for Zed"
+
 [grammars.ollama-modelfile]
 repository = "https://github.com/sammcj/zed-plugin-ollama-modelfile"
 commit = "784e57695c5988374d068013448839af24644ad0"
